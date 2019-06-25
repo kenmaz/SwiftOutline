@@ -1,0 +1,35 @@
+digraph SwiftOutline {
+graph [rankdir=LR]
+	subgraph cluster_0 {	"AddOnViewController" -> "AddOnViewController"
+	"AddOnViewController" -> "UINavigationController"
+	"AddOnUtil" -> "AddOnViewController"
+	"AddOnUtil" -> "AddOnViewController"
+	"SupportMail" -> "MFMailComposeViewController"
+	"SupportMail" -> "MFMailComposeViewController"
+	"HomeViewController" -> "HomeViewController"
+	"HomeViewController" -> "HomeViewController"
+	"HomeViewController" -> "HomeViewController"
+	"HomeViewController" -> "CanvasViewController"
+	"HomeViewController" -> "UIActivityViewController"
+	"HomeViewController" -> "MenuViewController"
+	"HomeViewController" -> "HomeViewController"
+	"FileViewController" -> "CanvasViewController"
+	"FileViewController" -> "CanvasViewController"
+	"MainTabBarController" -> "HomeViewController"
+	"MainTabBarController" -> "UINavigationController"
+	"MainTabBarController" -> "FileViewController"
+	"MainTabBarController" -> "UINavigationController"
+	"MainTabBarController" -> "HomeViewController"
+	"MainTabBarController" -> "UINavigationController"
+	"MainTabBarController" -> "HomeViewController"
+	"MainTabBarController" -> "UINavigationController"
+	"MenuViewController" -> "MenuViewController"
+	"MenuViewController" -> "MenuViewController"
+	"MenuViewController" -> "AddOnViewController"
+	"CanvasViewController" -> "CanvasViewController"
+	"CanvasViewController" -> "CanvasViewController"
+	"CanvasViewController" -> "UploadWebViewController"
+}
+"SupportMail" [style="filled",fillcolor=black, fontcolor=white];
+"AddOnUtil" [style="filled",fillcolor=black, fontcolor=white];
+}
