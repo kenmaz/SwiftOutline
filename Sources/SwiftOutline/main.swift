@@ -13,6 +13,6 @@ let main = command(
 
     Emitter().execute(rootDirs: dirs, excludes: excludes, outputPath: outputPath)
 }
-main.run("0.0.1")
+main.run("0.0.2")
 
 
