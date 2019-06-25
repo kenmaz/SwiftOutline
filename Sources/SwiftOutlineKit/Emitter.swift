@@ -11,8 +11,10 @@ import PathKit
 
 public final class Emitter {
 
-    func execute(rootDirs: [String], excludes: [String], outputPath: String) {
-        var subgraphs:[[(String, String)]] = []
+    public init() {}
+
+    public func execute(rootDirs: [String], excludes: [String], outputPath: String) {
+        var subgraphs:[[Analyzer.Call]] = []
         let analyzer = Analyzer()
         for rootDir in rootDirs {
             let files = allSourcePaths(directoryPath: rootDir)
@@ -37,14 +39,14 @@ public final class Emitter {
         for (i, subgraph) in subgraphs.enumerated() {
             buffer.append("\t")
             buffer.append("subgraph cluster_\(i) {")
-            for (caller, callee) in subgraph {
+            for call in subgraph {
                 buffer.append("\t")
-                let left = caller
-                let right = callee
+                let left = call.caller
+                let right = call.callee
                 buffer.append("\"\(left)\" -> \"\(right)\"")
                 buffer.append("\n")
-                names.insert(caller)
-                names.insert(callee)
+                names.insert(call.caller)
+                names.insert(call.callee)
             }
             buffer.append("}")
             buffer.append("\n")
