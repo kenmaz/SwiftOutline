@@ -9,7 +9,7 @@ import Foundation
 import SwiftSyntax
 import PathKit
 
-final class Emitter {
+public final class Emitter {
 
     func execute(rootDirs: [String], excludes: [String], outputPath: String) {
         var subgraphs:[[(String, String)]] = []

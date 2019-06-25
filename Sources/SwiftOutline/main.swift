@@ -1,5 +1,6 @@
 import Foundation
 import Commander
+import SwiftOutlineKit
 
 let main = command(
     VariadicOption<String>("dir", default: ["."], description: "Target sources directory"),
