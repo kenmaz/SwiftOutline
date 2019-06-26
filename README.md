@@ -5,7 +5,6 @@ SwiftOutline is a tool to generate relationship graph of iOS ViewControllers.
 ## Install
 ```
 $ brew install kenmaz/taps/swiftoutline
-$ brew install graphviz
 ```
 
 ## Usage 
