@@ -1,6 +1,6 @@
 # SwiftOutline
 
-SwiftOutline is the tool that generate relationship graph of iOS ViewControllers
+SwiftOutline is a tool to generate relationship graph of iOS ViewControllers.
 
 ## Install
 ```
