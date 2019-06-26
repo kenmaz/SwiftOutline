@@ -27,7 +27,7 @@ https://apps.apple.com/jp/app/animemaker/id405622194
 ![Sample Graph](https://github.com/kenmaz/SwiftOutline/blob/master/doc/sample.png?raw=true)
 
 
-### Options
+## Options
 ```
 $ swiftoutline --help
 Usage:
