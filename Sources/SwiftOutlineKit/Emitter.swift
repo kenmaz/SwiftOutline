@@ -13,7 +13,7 @@ public final class Emitter {
 
     public init() {}
 
-    public func execute(rootDirs: [String], excludes: [String], outputPath: String) {
+    public func execute(rootDirs: [String], excludes: [String], dotfilePath: String, outputPath: String) {
         var subgraphs:[[Analyzer.Call]] = []
         let analyzer = Analyzer()
         for rootDir in rootDirs {
@@ -62,8 +62,11 @@ public final class Emitter {
         buffer.append("\n")
         let text = buffer.joined()
 
-        let outpath = Path(outputPath)
+        let outpath = Path(dotfilePath)
         try! outpath.write(text.data(using: .utf8)!)
+
+        let graphviz = GraphvizClient()
+        graphviz.generateDotPNG(dotPath: dotfilePath, outputPath: outputPath)
     }
 
     private func allSourcePaths(directoryPath: String) -> [String] {
