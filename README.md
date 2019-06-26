@@ -13,6 +13,20 @@ $ swiftoutline --dir <path/to/sources> --output out.dot
 $ dot -Tpng -o out.png out.dot
 ```
 
+### Options
+```
+$ swiftoutline --help
+Usage:
+
+    $ swiftoutline
+
+Options:
+    --dir [default: ["."]] - Target sources directory
+    --exclude [default: ["Debug"]] - Keyword to exclude target source path
+    --output [default: /tmp/graph.png] - Graph image file output path
+    --dotfile [default: /tmp/graph.dot] - Intermediate .dot file output path
+```
+
 ## Graph Examples
 You can get a relationship graph of iOS ViewControllers like these:
 
